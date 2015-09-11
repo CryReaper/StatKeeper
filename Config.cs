@@ -30,10 +30,10 @@ namespace StatKeeper
 	{
 		public static Configuration Instance;
 
-		public bool PluginEnabled;
+		//public bool PluginEnabled;
 		public void LoadDefaults()
 		{
-			PluginEnabled = true;
+			//PluginEnabled = true;
 		}
 	}
 }

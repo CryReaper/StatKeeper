@@ -125,7 +125,15 @@ namespace StatKeeper
 						int kdRatio = int.Parse(node["KDRatio"].InnerText);
 						int newtDeaths = tDeaths + 1;
 						int newgDeaths = gDeaths + 1;
-						float newKDRatio = tKills/newtDeaths;
+						float newKDRatio;
+						if(tKills > 0 && tDeaths == 0)
+						{
+							newKDRatio = tKills/1;
+						}
+						else
+						{
+							newKDRatio = tKills/newtDeaths;
+						}
 
 						node["TotalDeaths"].InnerText = newtDeaths + "";
 						node["GunDeaths"].InnerText = newgDeaths + "";
@@ -141,7 +149,15 @@ namespace StatKeeper
 						int kdRatio = int.Parse(node["KDRatio"].InnerText);
 						int newtKills = tKills + 1;
 						int newgKills = gKills + 1;
-						float newKDRatio = newtKills/tDeaths;
+						float newKDRatio;
+						if(newtKills > 0 && tDeaths == 0)
+						{
+							newKDRatio = newtKills/1;
+						}
+						else
+						{
+							newKDRatio = newtKills/tDeaths;
+						}
 
 						node["TotalKills"].InnerText = newtKills + "";
 						node["GunKills"].InnerText = newgKills + "";
@@ -160,7 +176,15 @@ namespace StatKeeper
 						int kdRatio = int.Parse(node["KDRatio"].InnerText);
 						int newtDeaths = tDeaths + 1;
 						int newmDeaths = mDeaths + 1;
-						float newKDRatio = tKills/newtDeaths;
+						float newKDRatio;
+						if(tKills > 0 && tDeaths == 0)
+						{
+							newKDRatio = tKills/1;
+						}
+						else
+						{
+							newKDRatio = tKills/newtDeaths;
+						}
 
 						node["TotalDeaths"].InnerText = newtDeaths + "";
 						node["MeleeDeaths"].InnerText = newmDeaths + "";
@@ -176,7 +200,15 @@ namespace StatKeeper
 						int kdRatio = int.Parse(node["KDRatio"].InnerText);
 						int newtKills = tKills + 1;
 						int newmKills = mKills + 1;
-						float newKDRatio = newtKills/tDeaths;
+						float newKDRatio;
+						if(newtKills > 0 && tDeaths == 0)
+						{
+							newKDRatio = newtKills/1;
+						}
+						else
+						{
+							newKDRatio = newtKills/tDeaths;
+						}
 
 						node["TotalKills"].InnerText = newtKills + "";
 						node["MeleeKills"].InnerText = newmKills + "";
@@ -195,7 +227,15 @@ namespace StatKeeper
 						int kdRatio = int.Parse(node["KDRatio"].InnerText);
 						int newtDeaths = tDeaths + 1;
 						int newpDeaths = pDeaths + 1;
-						float newKDRatio = tKills/newtDeaths;
+						float newKDRatio;
+						if(tKills > 0 && tDeaths == 0)
+						{
+							newKDRatio = tKills/1;
+						}
+						else
+						{
+							newKDRatio = tKills/newtDeaths;
+						}
 
 						node["TotalDeaths"].InnerText = newtDeaths + "";
 						node["PunchDeaths"].InnerText = newpDeaths + "";
@@ -211,7 +251,15 @@ namespace StatKeeper
 						int kdRatio = int.Parse(node["KDRatio"].InnerText);
 						int newtKills = tKills + 1;
 						int newpKills = pKills + 1;
-						float newKDRatio = newtKills/tDeaths;
+						float newKDRatio;
+						if(newtKills > 0 && tDeaths == 0)
+						{
+							newKDRatio = newtKills/1;
+						}
+						else
+						{
+							newKDRatio = newtKills/tDeaths;
+						}
 
 						node["TotalKills"].InnerText = newtKills + "";
 						node["PunchKills"].InnerText = newpKills + "";
@@ -230,7 +278,15 @@ namespace StatKeeper
 						int kdRatio = int.Parse(node["KDRatio"].InnerText);
 						int newtDeaths = tDeaths + 1;
 						int newrDeaths = rDeaths + 1;
-						float newKDRatio = tKills/newtDeaths;
+						float newKDRatio;
+						if(tKills > 0 && tDeaths == 0)
+						{
+							newKDRatio = tKills/1;
+						}
+						else
+						{
+							newKDRatio = tKills/newtDeaths;
+						}
 
 						node["TotalDeaths"].InnerText = newtDeaths + "";
 						node["RoadDeaths"].InnerText = newrDeaths + "";
@@ -246,7 +302,15 @@ namespace StatKeeper
 						int kdRatio = int.Parse(node["KDRatio"].InnerText);
 						int newtKills = tKills + 1;
 						int newrKills = rKills + 1;
-						float newKDRatio = newtKills/tDeaths;
+						float newKDRatio;
+						if(newtKills > 0 && tDeaths == 0)
+						{
+							newKDRatio = newtKills/1;
+						}
+						else
+						{
+							newKDRatio = newtKills/tDeaths;
+						}
 
 						node["TotalKills"].InnerText = newtKills + "";
 						node["RoadKills"].InnerText = newrKills + "";
