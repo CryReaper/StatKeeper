@@ -76,9 +76,9 @@ namespace StatKeeperCommands
 				if (command.Length == 1)
 				{
 					UnturnedPlayer target = (UnturnedPlayer)caller;
-					Factions.Utility.readPVPNode(target);
+					StatKeeper.Utility.readPVPNode(target);
 				}
-				if (command.Length == 2)
+				if (command.Length == 2 && StatKeeper.Configuration.Instance.AdminView == false)
 				{
 					UnturnedPlayer target = UnturnedPlayer.FromName(command[1].ToString().ToLower());
 					if (target == null)
@@ -87,7 +87,26 @@ namespace StatKeeperCommands
 					}
 					else
 					{
-						Factions.Utility.readPVPNode(target);
+						StatKeeper.Utility.readPVPNode(target);
+					}
+				}
+				if (command.Length == 2 && StatKeeper.Configuration.Instance.AdminView == true)
+				{
+					if(cPlayer.HasPermission("stats.admin"))
+					{
+						UnturnedPlayer target = UnturnedPlayer.FromName(command[1].ToString().ToLower());
+						if (target == null)
+						{
+							Rocket.Unturned.Chat.UnturnedChat.Say (cPlayer, "Player does not exist or is offline!", Color.yellow);
+						}
+						else
+						{
+							StatKeeper.Utility.readPVPNode(target);
+						}
+					}
+					else
+					{
+						Rocket.Unturned.Chat.UnturnedChat.Say (cPlayer, "You do not have permission to use this command!", Color.red);
 					}
 				}
 			}
@@ -96,9 +115,9 @@ namespace StatKeeperCommands
 				if (command.Length == 1)
 				{
 					UnturnedPlayer target = (UnturnedPlayer)caller;
-					Factions.Utility.readPVENode(target);
+					StatKeeper.Utility.readPVENode(target);
 				}
-				if (command.Length == 2)
+				if (command.Length == 2 && StatKeeper.Configuration.Instance.AdminView == false)
 				{
 					UnturnedPlayer target = UnturnedPlayer.FromName(command[1].ToString().ToLower());
 					if (target == null)
@@ -107,7 +126,26 @@ namespace StatKeeperCommands
 					}
 					else
 					{
-						Factions.Utility.readPVENode(target);
+						StatKeeper.Utility.readPVENode(target);
+					}
+				}
+				if (command.Length == 2 && StatKeeper.Configuration.Instance.AdminView == true)
+				{
+					if(cPlayer.HasPermission("stats.admin"))
+					{
+						UnturnedPlayer target = UnturnedPlayer.FromName(command[1].ToString().ToLower());
+						if (target == null)
+						{
+							Rocket.Unturned.Chat.UnturnedChat.Say (cPlayer, "Player does not exist or is offline!", Color.yellow);
+						}
+						else
+						{
+							StatKeeper.Utility.readPVENode(target);
+						}
+					}
+					else
+					{
+						Rocket.Unturned.Chat.UnturnedChat.Say (cPlayer, "You do not have permission to use this command!", Color.red);
 					}
 				}
 			}
@@ -116,9 +154,9 @@ namespace StatKeeperCommands
 				if (command.Length == 1)
 				{
 					UnturnedPlayer target = (UnturnedPlayer)caller;
-					Factions.Utility.readTKNode(target);
+					StatKeeper.Utility.readTKNode(target);
 				}
-				if (command.Length == 2)
+				if (command.Length == 2 && StatKeeper.Configuration.Instance.AdminView == false)
 				{
 					UnturnedPlayer target = UnturnedPlayer.FromName(command[1].ToString().ToLower());
 					if (target == null)
@@ -127,7 +165,26 @@ namespace StatKeeperCommands
 					}
 					else
 					{
-						Factions.Utility.readTKNode(target);
+						StatKeeper.Utility.readTKNode(target);
+					}
+				}
+				if (command.Length == 2 && StatKeeper.Configuration.Instance.AdminView == true)
+				{
+					if(cPlayer.HasPermission("stats.admin"))
+					{
+						UnturnedPlayer target = UnturnedPlayer.FromName(command[1].ToString().ToLower());
+						if (target == null)
+						{
+							Rocket.Unturned.Chat.UnturnedChat.Say (cPlayer, "Player does not exist or is offline!", Color.yellow);
+						}
+						else
+						{
+							StatKeeper.Utility.readTKNode(target);
+						}
+					}
+					else
+					{
+						Rocket.Unturned.Chat.UnturnedChat.Say (cPlayer, "You do not have permission to use this command!", Color.red);
 					}
 				}
 			}
@@ -136,9 +193,9 @@ namespace StatKeeperCommands
 				if (command.Length == 1)
 				{
 					UnturnedPlayer target = (UnturnedPlayer)caller;
-					Factions.Utility.readTDNode(target);
+					StatKeeper.Utility.readTDNode(target);
 				}
-				if (command.Length == 2)
+				if (command.Length == 2 && StatKeeper.Configuration.Instance.AdminView == false)
 				{
 					UnturnedPlayer target = UnturnedPlayer.FromName(command[1].ToString().ToLower());
 					if (target == null)
@@ -147,7 +204,26 @@ namespace StatKeeperCommands
 					}
 					else
 					{
-						Factions.Utility.readTDNode(target);
+						StatKeeper.Utility.readTDNode(target);
+					}
+				}
+				if (command.Length == 2 && StatKeeper.Configuration.Instance.AdminView == true)
+				{
+					if(cPlayer.HasPermission("stats.admin"))
+					{
+						UnturnedPlayer target = UnturnedPlayer.FromName(command[1].ToString().ToLower());
+						if (target == null)
+						{
+							Rocket.Unturned.Chat.UnturnedChat.Say (cPlayer, "Player does not exist or is offline!", Color.yellow);
+						}
+						else
+						{
+							StatKeeper.Utility.readTDNode(target);
+						}
+					}
+					else
+					{
+						Rocket.Unturned.Chat.UnturnedChat.Say (cPlayer, "You do not have permission to use this command!", Color.red);
 					}
 				}
 			}
@@ -156,9 +232,9 @@ namespace StatKeeperCommands
 				if (command.Length == 1)
 				{
 					UnturnedPlayer target = (UnturnedPlayer)caller;
-					Factions.Utility.readKDNode(target);
+					StatKeeper.Utility.readKDNode(target);
 				}
-				if (command.Length == 2)
+				if (command.Length == 2 && StatKeeper.Configuration.Instance.AdminView == false)
 				{
 					UnturnedPlayer target = UnturnedPlayer.FromName(command[1].ToString().ToLower());
 					if (target == null)
@@ -167,7 +243,26 @@ namespace StatKeeperCommands
 					}
 					else
 					{
-						Factions.Utility.readKDNode(target);
+						StatKeeper.Utility.readKDNode(target);
+					}
+				}
+				if (command.Length == 2 && StatKeeper.Configuration.Instance.AdminView == true)
+				{
+					if(cPlayer.HasPermission("stats.admin"))
+					{
+						UnturnedPlayer target = UnturnedPlayer.FromName(command[1].ToString().ToLower());
+						if (target == null)
+						{
+							Rocket.Unturned.Chat.UnturnedChat.Say (cPlayer, "Player does not exist or is offline!", Color.yellow);
+						}
+						else
+						{
+							StatKeeper.Utility.readKDNode(target);
+						}
+					}
+					else
+					{
+						Rocket.Unturned.Chat.UnturnedChat.Say (cPlayer, "You do not have permission to use this command!", Color.red);
 					}
 				}
 			}

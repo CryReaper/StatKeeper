@@ -63,10 +63,10 @@ namespace StatKeeper
 				writer.Indentation = 2;
 				writer.WriteStartElement ("Stats");
 				writer.WriteStartElement ("PvP");
-				Factions.Utility.createPVPNode("0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", writer);
+				StatKeeper.Utility.createPVPNode("0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", writer);
 				writer.WriteEndElement ();
 				writer.WriteStartElement ("PvE");
-				Factions.Utility.createPVENode("0", "0", "0", "0", "0", "0", "0", writer);
+				StatKeeper.Utility.createPVENode("0", "0", "0", "0", "0", "0", "0", writer);
 				writer.WriteEndElement ();
 				writer.WriteEndElement ();
 				writer.WriteEndDocument ();

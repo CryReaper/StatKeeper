@@ -16,7 +16,7 @@ using Rocket.Unturned.Player;
 using SDG.Unturned;
 using UnityEngine;
 
-namespace Factions
+namespace StatKeeper
 {
 	public class Utility
 	{
