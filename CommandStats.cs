@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace StatKeeperCommands
 {
-	public class StatsCommand : IRocketCommand
+	public class CommandStats : IRocketCommand
     {
         public AllowedCaller AllowedCaller
         {
