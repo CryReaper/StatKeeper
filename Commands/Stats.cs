@@ -21,15 +21,16 @@ using UnityEngine;
 namespace StatKeeperCommands
 {
 	public class StatsCommand : IRocketCommand
-	{
-		public bool AllowFromConsole
-		{
-			get
-			{
-				return false;
-			}
-		}
-		public List<string> Permissions
+    {
+        public AllowedCaller AllowedCaller
+        {
+            get
+            {
+                return AllowedCaller.Player;
+            }
+        }
+
+        public List<string> Permissions
 		{
 			get
 			{
@@ -63,7 +64,7 @@ namespace StatKeeperCommands
 			get { return new List<string> { "stats" }; }
 		}
 
-		public void Execute(IRocketPlayer caller, string[] command)
+        public void Execute(IRocketPlayer caller, string[] command)
 		{
 			UnturnedPlayer cPlayer = (UnturnedPlayer)caller;
 
