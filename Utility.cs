@@ -1,19 +1,5 @@
-﻿using System;
-using System.Data;
-using System.Xml;
-using System.Windows.Forms;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Threading;
-using System.Windows;
-using Rocket.API;
-using Rocket.Unturned;
-using Rocket.Unturned.Commands;
+﻿using System.Xml;
 using Rocket.Unturned.Player;
-using SDG.Unturned;
 using UnityEngine;
 
 namespace StatKeeper
