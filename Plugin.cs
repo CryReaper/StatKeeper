@@ -3,6 +3,7 @@ using Rocket.Core.Logging;
 using Rocket.Unturned;
 using Rocket.Unturned.Player;
 using Rocket.Core.Plugins;
+using System.IO;
 
 namespace StatKeeper
 {
@@ -18,8 +19,7 @@ namespace StatKeeper
 			U.Events.OnPlayerDisconnected += Events_OnPlayerDisconnected;
 			Rocket.Unturned.Events.UnturnedPlayerEvents.OnPlayerDeath += UnturnedPlayerEvents_OnPlayerDeath;
 
-			string currentPath = System.IO.Directory.GetCurrentDirectory();
-			System.IO.Directory.CreateDirectory(currentPath + "\\Plugins\\StatKeeper\\Stats");
+			System.IO.Directory.CreateDirectory(Path.Combine(Directory, "Plugins/StatKeeper/Stats/"));
 		}
 		protected override void Unload()
 		{
@@ -29,11 +29,7 @@ namespace StatKeeper
 		}
 		private void Events_OnPlayerConnected(UnturnedPlayer player)
 		{
-			string currentPath = System.IO.Directory.GetCurrentDirectory();
-
-			//create initial stat file
-			string filePath = currentPath + "\\Plugins\\StatKeeper\\Stats\\";
-			string statFile = filePath + player.CSteamID + ".xml";
+            string statFile = Path.Combine(Directory, "Plugins/StatKeeper/Stats/", player.CSteamID + ".xml");
 
 			if (!System.IO.File.Exists (statFile)) 
 			{
