@@ -29,7 +29,7 @@ namespace StatKeeper
 		}
 		private void Events_OnPlayerConnected(UnturnedPlayer player)
 		{
-            string statFile = Path.Combine(Directory, "Plugins/StatKeeper/Stats/", player.CSteamID + ".xml");
+            string statFile = Path.Combine(Directory, "Plugins/StatKeeper/Stats/"+ player.CSteamID + ".xml");
 
 			if (!System.IO.File.Exists (statFile)) 
 			{
