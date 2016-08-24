@@ -52,17 +52,17 @@ namespace StatKeeper
         private string showPVP(UnturnedPlayer player,Stats stats)
         {
             return player.CharacterName + "'s PvP Stats: Total Kills [" + stats.TotalKills + "]"
-            + ", Total Deaths [" + stats.TotalDeaths + "]" + ", KD [" + stats.KDRatio + "]" + ", Gun Kills [" + stats.GetKills(SDG.Unturned.EDeathCause.GUN) + "]"
-            + ", Melee Kills [" + stats.GetKills(SDG.Unturned.EDeathCause.MELEE) + "]" + ", Punch Kills [" + stats.GetKills(SDG.Unturned.EDeathCause.PUNCH) + "]" + ", Road Kills [" + stats.GetKills(SDG.Unturned.EDeathCause.ROADKILL) + "]"
-            + ", Gun Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.GUN) + "]" + ", Melee Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.MELEE) + "]" + ", Punch Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.PUNCH) + "]"
-            + ", Road Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.ROADKILL) + "]" + ", Suicides [" + stats.GetDeaths(SDG.Unturned.EDeathCause.SUICIDE) + "]";
+            + ", Total Deaths [" + stats.TotalDeaths + "]" + ", KD [" + stats.KDRatio + "]" + ", Gun Kills [" + stats.GetKills(SDG.Unturned.EDeathCause.GUN.ToString()) + "]"
+            + ", Melee Kills [" + stats.GetKills(SDG.Unturned.EDeathCause.MELEE.ToString()) + "]" + ", Punch Kills [" + stats.GetKills(SDG.Unturned.EDeathCause.PUNCH.ToString()) + "]" + ", Road Kills [" + stats.GetKills(SDG.Unturned.EDeathCause.ROADKILL.ToString()) + "]"
+            + ", Gun Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.GUN.ToString()) + "]" + ", Melee Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.MELEE.ToString()) + "]" + ", Punch Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.PUNCH.ToString()) + "]"
+            + ", Road Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.ROADKILL.ToString()) + "]" + ", Suicides [" + stats.GetDeaths(SDG.Unturned.EDeathCause.SUICIDE.ToString()) + "]";
         }
 
         private string showPVE(UnturnedPlayer player, Stats stats)
         {
             return player.CharacterName + "'s PvE Stats: Total Deaths [" + stats.TotalDeaths + "]"
-                   + ", Zombie Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.ZOMBIE) + "]" + ", Vehicle Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.VEHICLE) + "]" + ", Food Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.FOOD) + "]"
-                   + ", Water Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.WATER) + "]" + ", Infection Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.INFECTION) + "]" + ", Bleeding Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.BLEEDING) + "]";
+                   + ", Zombie Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.ZOMBIE.ToString()) + "]" + ", Vehicle Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.VEHICLE.ToString()) + "]" + ", Food Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.FOOD.ToString()) + "]"
+                   + ", Water Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.WATER.ToString()) + "]" + ", Infection Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.INFECTION.ToString()) + "]" + ", Bleeding Deaths [" + stats.GetDeaths(SDG.Unturned.EDeathCause.BLEEDING.ToString()) + "]";
         }
 
         private string showTK(UnturnedPlayer player, Stats stats)
