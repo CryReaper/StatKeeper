@@ -61,7 +61,8 @@
     <Compile Include="Plugin.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="CommandStats.cs" />
-    <Compile Include="Utility.cs" />
+    <Compile Include="Stats.cs" />
+    <Compile Include="StatsPlayerComponent.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
