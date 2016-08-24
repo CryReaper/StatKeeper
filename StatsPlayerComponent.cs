@@ -1,12 +1,7 @@
 ﻿using Rocket.Core.Assets;
 using Rocket.Unturned.Player;
 using Steamworks;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StatKeeper
 {
