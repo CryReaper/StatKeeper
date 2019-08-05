@@ -87,10 +87,10 @@ namespace StatKeeper
 
         public ulong SteamID { get; set; } = 0;
         public DateTime LastUpdated { get; set; } = DateTime.Now;
-        public DateTime Created { get; private set; } = DateTime.Now;
+        public DateTime Created { get; set; } = DateTime.Now;
 
-        public SerializableDictionary<string, int> Kills { get; private set; } = new SerializableDictionary<string, int>();
-        public SerializableDictionary<string, int> Deaths { get; private set; } = new SerializableDictionary<string, int>();
+        public SerializableDictionary<string, int> Kills { get; set; } = new SerializableDictionary<string, int>();
+        public SerializableDictionary<string, int> Deaths { get; set; } = new SerializableDictionary<string, int>();
 
         public double KDRatio { get; set; } = 0;
         public int TotalKills { get; set; } = 0;
